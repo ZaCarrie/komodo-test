@@ -1,1 +1,24 @@
-## Add resources to get started
+[[server]]
+name = "server-wlsfk"
+[server.config]
+address = "https://periphery:8120"
+enabled = true
+
+##
+
+[[builder]]
+name = "local"
+[builder.config]
+type = "Server"
+params.server_id = "server-wlsfk"
+
+##
+
+[[resource_sync]]
+name = "komodo-test"
+[resource_sync.config]
+repo = "ZaCarrie/komodo-test"
+git_account = "github.wish887@slmail.me"
+resource_path = ["komodo.toml"]
+managed = true
+delete = true
